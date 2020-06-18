@@ -1,12 +1,13 @@
 // Import libraries
 import React from 'react';
 import {AppRegistry, Container} from 'react-native';
-import Header from './src/components/Header'
+import Header from './src/components/Header';
+import App from './App';
 
 // Create component
-const App = () => {
+const Entry = () => {
 	return (
-		<Header />
+		<App />
 	)
 }
 

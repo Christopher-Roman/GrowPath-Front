@@ -1,27 +1,30 @@
 // Import Libraries
 import React from 'react';
-import { Text, View} from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
 
 // Create Component
-const Header = () => {
-	const { textStyling, viewStyle } = styles;
+const Header = ({title}) => {
 
 	return (
-		<View style={viewStyle}>
-			<Text style={textStyling}>GrowPath</Text>
+		<View style={styles.header}>
+			<Text style={styles.text}>{title}</Text>
 		</View>
 	)
 }
 
 
-const styles = {
-	textStyling: {
-		fontSize: 22
+const styles = StyleSheet.create({
+	header: {
+		backgroundColor: '#6aa84f',
+		height: 60,
+		padding: 15
 	},
-	viewStyle: {
-		backgroundColor: '#6aa84f'
+	text: {
+		backgroundColor: '#6aa84f',
+		fontSize: 23,
+		textAlign: 'center'
 	}
-}
+})
 
 // Make component available to other components
 export default Header;
